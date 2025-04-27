@@ -59,7 +59,7 @@ def backup_database():
         send_email(" Không tìm thấy file backup", "Không có file .sql hoặc .sqlite3 nào để backup.")
 
 # Lịch chạy hằng ngày
-schedule.every().day.at("00:00").do(backup_database)
+schedule.every().day.at("23:32").do(backup_database)
 
 if __name__ == "__main__":
     print("Đang chạy lịch backup lúc 00:00 mỗi ngày...")
